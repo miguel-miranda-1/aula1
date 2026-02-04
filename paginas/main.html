@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\style\style.css">
+    <title>E-commerce</title>
+</head>
+<body>
+    <header>
+        <h1>Minha Loja Digital</h1>
+    </header>
+    <main>
+        <article class="produto">
+            <h2>Tênis Tech SENAI</h2>
+            <p>Preço original: R$ <span id="preco-base">200</span></p>
+            <p>Desconto de 50% aplicado!</p>
+            <hr>
+            <h3>Total: R$ <span id="preco-final">0</span></h3>
+            <hr>
+            <h3>Total com Frete: R$ <span id="preco-final-frete">0</span></h3>
+        </article>
+    </main>
+
+    <script>
+        const precoBase = 200;
+        const desconto = 0.50; // 50%
+        const frete = 23;
+
+        // Usando operadores aritméticos
+        const valorDesconto = precoBase * desconto;
+        const precoFinal = precoBase - valorDesconto;
+        const precoFinalFrete = precoFinal + frete;
+        
+        // Exibindo no HTML
+        document.getElementById('preco-final').innerText = precoFinal;
+
+        document.getElementById('preco-final-frete').innerText = precoFinalFrete;
+    </script>
+</body>
+</html>
